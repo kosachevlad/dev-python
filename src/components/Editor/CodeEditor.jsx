@@ -1,13 +1,12 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo } from 'react';
 import LineNumbers from './LineNumbers.jsx';
-
-const initialCode = 'print("Привіт, Python!")';
+import { useEditor } from '../../state/EditorContext.jsx';
 
 function CodeEditor() {
-  const [code, setCode] = useState(initialCode);
+  const { activeTab, updateActiveCode } = useEditor();
   const lineCount = useMemo(
-    () => code.split('\n').length,
-    [code],
+    () => activeTab.code.split('\n').length,
+    [activeTab.code],
   );
 
   return (
@@ -15,10 +14,10 @@ function CodeEditor() {
       <LineNumbers count={lineCount} />
 
       <textarea
-        value={code}
-        onChange={(event) => setCode(event.target.value)}
+        value={activeTab.code}
+        onChange={(event) => updateActiveCode(event.target.value)}
         spellCheck="false"
-        aria-label="Код Python"
+        aria-label={`Код Python у ${activeTab.name}`}
       />
     </section>
   );

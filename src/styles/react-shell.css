@@ -1,0 +1,71 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, sans-serif;
+  background: #08111f;
+  color: #eaf3ff;
+}
+
+.react-app-shell {
+  min-height: 100vh;
+  padding: 24px;
+  background: #08111f;
+}
+
+.react-header {
+  display: flex;
+  align-items: center;
+  min-height: 56px;
+  color: #2bd9a7;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.react-tabs {
+  display: flex;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.react-tab,
+.react-tab-add {
+  border: 1px solid #294565;
+  border-radius: 8px;
+  padding: 10px 14px;
+  background: #12243b;
+  color: #dcecff;
+  cursor: pointer;
+}
+
+.react-tab.is-active {
+  background: #1d3859;
+}
+
+.react-editor {
+  display: flex;
+  margin-top: 16px;
+  border: 1px solid #294565;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #0d1b2e;
+}
+
+.react-line-numbers {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 12px;
+  color: #537399;
+  text-align: right;
+  user-select: none;
+}
+
+.react-editor textarea {
+  flex: 1;
+  min-height: 260px;
+  padding: 16px;
+  border: 0;
+  outline: 0;
+  resize: vertical;
+  background: transparent;
+  color: #dcecff;
+  font: 16px/1.6 ui-monospace, Consolas, monospace;
+}

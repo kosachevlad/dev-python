@@ -1,30 +1,25 @@
 import React from 'react';
 import Tab from './Tab.jsx';
-
-const demoTabs = [
-  {
-    id: 'main',
-    name: 'main.py',
-    active: true,
-  },
-  {
-    id: 'lesson-1',
-    name: 'lesson-1.py',
-    active: false,
-  },
-];
+import { useEditor } from '../../state/EditorContext.jsx';
 
 function Tabs() {
+  const {
+    tabs,
+    activeTabId,
+    setActiveTabId,
+  } = useEditor();
+
   return (
     <nav
       className="react-tabs"
       aria-label="Вкладки файлів"
     >
-      {demoTabs.map((tab) => (
+      {tabs.map((tab) => (
         <Tab
           key={tab.id}
           name={tab.name}
-          active={tab.active}
+          active={tab.id === activeTabId}
+          onClick={() => setActiveTabId(tab.id)}
         />
       ))}
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './Header.jsx';
 
 function AppShell() {
   return (
@@ -6,9 +7,7 @@ function AppShell() {
       className="react-app-shell"
       aria-label="Кодик"
     >
-      <header className="react-header">
-        Кодик
-      </header>
+      <Header />
     </main>
   );
 }

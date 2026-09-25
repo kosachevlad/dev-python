@@ -1,16 +1,8 @@
 import React from 'react';
+import AppShell from './components/AppShell.jsx';
 
 function App() {
-  return (
-    <main
-      className="react-app-shell"
-      aria-label="Кодик"
-    >
-      <header>
-        Кодик
-      </header>
-    </main>
-  );
+  return <AppShell />;
 }
 
 export default App;

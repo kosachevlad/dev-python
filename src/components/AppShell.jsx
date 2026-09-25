@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header.jsx';
 import Tabs from './Tabs/Tabs.jsx';
 import CodeEditor from './Editor/CodeEditor.jsx';
+import '../../styles/react-shell.css';
 import { EditorProvider } from '../state/EditorContext.jsx';
 
 function AppShell() {
